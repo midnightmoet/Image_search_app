@@ -1,0 +1,149 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: #f7f7f7;
+  font-family: "Times Roman", sans serif;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+#search-input {
+  width: 60%;
+  max-width: 400px;
+  margin-right: 16px;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-size: 18px;
+  color: #333;
+  border: none;
+  cursor: pointer;
+}
+
+#search-button {
+  background: blue;
+  color: white;
+  font-size: 18px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+#search-button:hover {
+  background: white;
+  color: blue;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+.search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0px auto;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 60px;
+  width: 30%;
+  border-radius: 10px;
+  overflow: hidden;
+  /*   border: 1px solid black; */
+}
+
+.search-result:hover {
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-result:hover img {
+  transform: scale(1.05);
+}
+
+.search-result img {
+  width: 20vw;
+  height: 200px;
+  object-fit: cover;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+  border: 1pz solid black;
+  transition: transform 0.3s ease-in-out;
+}
+
+.search-result img:hover {
+  /*   box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3); */
+}
+
+.search-result a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 10px;
+  cursor: pointer;
+  font-style: italic;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  /*   border: 1px solid black; */
+}
+
+.search-result:hover a {
+  background: lightgray;
+  text-decoration: none;
+  color: blue;
+}
+
+#show-more-button {
+  float: right;
+  background: black;
+  color: white;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+
+#show-more-button:hover {
+  background: white;
+  color: blue;
+  box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  border: none;
+}
+
+@media (max-width: 768px) {
+    .search-result {
+        width: 45%;
+    }
+
+    .search-result img {
+        width: 20vw;
+        object-fit: cover;
+    }
+
+    .search-result a {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+}
