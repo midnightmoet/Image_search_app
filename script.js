@@ -2,7 +2,7 @@ const accessKey = 'fkS4fcYdjDR-ZijxidFbP6XQ5J4EozvqCHeVM9qF84U';
 const formEl = document.querySelector('form');  
 const searchInputEl = document.getElementById('search-input');
 const searchResultsEl = document.querySelector('.search-results');
-const showMoreButton = document.getElementById("show-more-button");
+const showMoreButtonEl = document.getElementById("show-more-button");
 
 let inputData = "";
 let page = 1;
@@ -37,10 +37,13 @@ async function searchImages(){
     imageWrapper.appendChild(imageLink);
     searchResultsEl.appendChild(imageWrapper);
   } )
+
+  page++;
   
- 
+  console.log(page);
+
   if(page > 1){
-    showMoreButton.style.display = block;
+    showMoreButtonEl.style.display = "block";
   }
   
   // console.log(results);  JUST USED THIS FOR TESTING IN CONSOLE. SUCCESSFUL!!!
@@ -51,4 +54,8 @@ formEl.addEventListener('submit', (e) => {
     page = 1;
     searchImages();
     
+});
+
+showMoreButtonEl.addEventListener("click", () => {
+  searchImages();
 });
