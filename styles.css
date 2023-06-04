@@ -84,7 +84,7 @@ form {
   height: 200px;
   object-fit: cover;
   padding: 20px;
-  margin: 20px;
+  margin: 20px auto;
   border-radius: 10px;
   border: 1pz solid black;
   transition: transform 0.3s ease-in-out;
